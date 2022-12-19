@@ -1,4 +1,26 @@
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+  }
+
+h1, h2{
+    background-color: red;
+
+}
+.question-container{
+  background-color: green;
+}
+  body {
+    margin: 0;
+    font-family: Helvetica;
+  }
 img{
     height: 250px;
     width: 250px;
 }
+
+/* 768px is a common "breakpoint" width for tablets */
