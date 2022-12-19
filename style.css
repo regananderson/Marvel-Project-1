@@ -12,7 +12,7 @@ html,body {
     margin: 0;
     font-family: "Bangers", "Helvetica";
     display:grid;
-    background-color: orange;
+    background-color: rgb(202, 42, 42);
     grid-template-columns: 1fr;
     grid-template-rows: 100px 100px auto 50px 50px;
     grid-template-areas: 
@@ -44,7 +44,7 @@ h2{
   height: 100%;
   background-color: white;
   height: 300px;
-  font-size: 30px;
+  font-size: 25px;
   padding: 20px;
   text-align: center;
 }
@@ -97,10 +97,11 @@ h2{
 }
 .result{
   height: 100%;
-  font-size: 40px;
+  font-size: 30px;
   height: 50px;
   text-align: center;
   padding: 20px;
+  background-color: white;
 }
 /* img{
     height: 250px;

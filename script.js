@@ -34,7 +34,27 @@ const questions = [{
         {text: "Deadpool", isCorrect: false},
         {text: "Captain America", isCorrect: true},
         {text: "Ant-Man", isCorrect: false },
-]
+    ]
+},
+{
+    id: 3,
+    //q: 'Select the correct character below:',
+    c: 'Thanos',
+    a: [{text: "Thanos", isCorrect: true },
+        {text: "Doctor Octopus", isCorrect: false},
+        {text: "Doctor Doom", isCorrect: false},
+        {text: "Green Goblin", isCorrect: false },
+    ]
+},
+{
+    id: 4,
+    //q: 'Select the correct character below:',
+    c: 'Storm',
+    a: [{text: "Black Widow", isCorrect: false },
+        {text: "Captain Marvel", isCorrect: false},
+        {text: "Storm", isCorrect: true},
+        {text: "Gamora", isCorrect: false },
+    ]
 }
 ]
 
@@ -104,10 +124,38 @@ function handleGetData(event) {
               // captainAmericarender(captainAmericaData)    
          }), (error) => {
                console.log("bad request", error)
-             }
-  }
+             },
+             $.ajax({
+                // url: "https://gateway.marvel.com:443/v1/public/characters?ts=7&apikey=9f52847cde39675d57b1d9a8259671c5&hash=d6875e49b66202cc04525cf5712e2f86&name=Iron%20Man", 
+                url: "https://gateway.marvel.com:443/v1/public/characters?ts=7&apikey=9f52847cde39675d57b1d9a8259671c5&hash=d6875e49b66202cc04525cf5712e2f86&name=" + questions[3].c, 
+           
+               }).then(
+                 (data) => {
+                   
+                   thanosData = data
+                   
+                   console.log(thanosData)
+                  // captainAmericarender(captainAmericaData)    
+             }), (error) => {
+                   console.log("bad request", error)
+
+  },
+  $.ajax({
+    // url: "https://gateway.marvel.com:443/v1/public/characters?ts=7&apikey=9f52847cde39675d57b1d9a8259671c5&hash=d6875e49b66202cc04525cf5712e2f86&name=Iron%20Man", 
+    url: "https://gateway.marvel.com:443/v1/public/characters?ts=7&apikey=9f52847cde39675d57b1d9a8259671c5&hash=d6875e49b66202cc04525cf5712e2f86&name=" + questions[4].c, 
+
+   }).then(
+     (data) => {
+       
+       stormData = data
+       
+       console.log(stormData)
+      // captainAmericarender(captainAmericaData)    
+ }), (error) => {
+       console.log("bad request", error)
 
 
+ }
 
 
   
@@ -116,21 +164,14 @@ function handleGetData(event) {
       let description = hulkData.data.results[0].description;
           descriptionArray = description.split(' ');
          console.log(descriptionArray)
-          descriptionArray.splice(15, 3, "_____")
-          descriptionArray.splice(25, 1, "_____")
-          descriptionArray.splice(35, 1, "_____")
-          descriptionArray.splice(40, 1, "_____")
+           descriptionArray.splice(15, 3, "_____")
+           descriptionArray.splice(24, 2, "_____.")
+           descriptionArray.splice(33, 2, "_____")
+           descriptionArray.splice(37, 2, "_____")
 
           descriptionHint = descriptionArray.join(' ');
           //console.log(descriptionHint)
-          $question.text(descriptionHint)
-    console.log(descriptionHint)
-    // $description.text("Description: " + descriptionHint)
-    // //$description.append( '<img src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg" alt="Iron Man" />')
-    // $story1.text("story1-" + characterData.data.results[0].stories.items[0].name)
-    // $series1.text("series1-" + characterData.data.results[0].series.items[0].name)
-    // $event1.text("event1-" + characterData.data.results[0].events.items[0].name)
-    // $comic1.text("comic1-" + characterData.data.results[0].comics.items[0].name)
+          $question.text(`Q 1/5:  ${descriptionHint}`)
     
   }
 
@@ -141,47 +182,57 @@ function handleGetData(event) {
           descriptionArray = description.split(' ');
           console.log(descriptionArray)
           descriptionArray.splice(13, 2, "_____")
-          descriptionArray.splice(35, 2, "_____")
-          descriptionArray.splice(49, 2, "_____")
+          descriptionArray.splice(35, 1, "_____")
+          descriptionArray.splice(50, 2, "_____")
          
           descriptionHint = descriptionArray.join(' ');
           //console.log(descriptionHint)
-          $question.text(descriptionHint)
+          $question.text(`Q 2/5:  ${descriptionHint}`)
     console.log(descriptionHint)
-    // $description.text("Description: " + descriptionHint)
-    //$description.append( '<img src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg" alt="Iron Man" />')
-    // $story1.text("story1-" + characterData.data.results[0].stories.items[0].name)
-    // $series1.text("series1-" + characterData.data.results[0].series.items[0].name)
-    // $event1.text("event1-" + characterData.data.results[0].events.items[0].name)
-    // $comic1.text("comic1-" + characterData.data.results[0].comics.items[0].name)
-    
+ 
 
 }
 
 function captainAmericarender() {
-    //iron man render
     let description = captainAmericaData.data.results[0].description;
         descriptionArray = description.split(' ');
         console.log(descriptionArray)
         descriptionArray.splice(10, 2, "_____")
-        descriptionArray.splice(33, 2, "_____")
+        descriptionArray.splice(32, 2, "_____")
        
         descriptionHint = descriptionArray.join(' ');
         //console.log(descriptionHint)
-        $question.text(descriptionHint)
+        $question.text(`Q 3/5:  ${descriptionHint}`)
         
   console.log(descriptionHint)
-  // $description.text("Description: " + descriptionHint)
   // //$description.append( '<img src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg" alt="Iron Man" />')
-  // $story1.text("story1-" + characterData.data.results[0].stories.items[0].name)
-  // $series1.text("series1-" + characterData.data.results[0].series.items[0].name)
-  // $event1.text("event1-" + characterData.data.results[0].events.items[0].name)
-  // $comic1.text("comic1-" + characterData.data.results[0].comics.items[0].name)
-  
-
 }
-
-
+function thanosrender() {
+    //iron man render
+    let description = thanosData.data.results[0].description;
+        descriptionArray = description.split(' ');
+        console.log(descriptionArray)
+        descriptionArray.splice(3, 1, "_____")
+       
+        descriptionHint = descriptionArray.join(' ');
+        //console.log(descriptionHint)
+        $question.text(`Q 4/5:  ${descriptionHint}`)
+        
+  console.log(descriptionHint)
+}
+function stormrender() {
+    //iron man render
+    let description = stormData.data.results[0].description;
+        descriptionArray = description.split(' ');
+        console.log(descriptionArray)
+        descriptionArray.splice(0, 2, "_____")
+       
+        descriptionHint = descriptionArray.join(' ');
+        //console.log(descriptionHint)
+        $question.text(`Q 5/5:  ${descriptionHint}`)
+        
+  console.log(descriptionHint)
+}
 
 function iterate(id) {
  
@@ -331,7 +382,7 @@ next.addEventListener('click', function(){
         // iterate(id);
         //console.log("id is zero");
         console.log(hulkrender())
-        //hulkrender();
+        hulkrender();
    
 
     }if (id === 1) {
@@ -344,13 +395,27 @@ next.addEventListener('click', function(){
         // id++;
         // iterate(id);
         //console.log("id is two");
-        console.log(captainAmericarender())
+        //console.log(captainAmericarender())
         captainAmericarender();
+        
+    }if (id === 3) {
+        // id++;
+        // iterate(id);
+        //console.log("id is two");
+        //console.log(captainAmericarender())
+        thanosrender();
+        
+    }if (id === 4) {
+        // id++;
+        // iterate(id);
+        //console.log("id is two");
+        //console.log(captainAmericarender())
+        stormrender();
         
     }
 });
 
-
+ }
   });
 
 
