@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); 
 html,body {
     height: 100%;
     width: 100%;
@@ -6,21 +6,105 @@ html,body {
 * {
     box-sizing: border-box;
   }
+  
+  body {
+    height: 100vh;
+    margin: 0;
+    font-family: "Bangers", "Helvetica";
+    display:grid;
+    background-color: orange;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px auto 50px 50px;
+    grid-template-areas: 
+        "h1"
+        "h2"
+        "qstn"
+        "choices"
+        "nav";
+  }
 
-h1, h2{
-    background-color: red;
+h1{
+  grid-area: h1;
+  background-color: white;
+  height: 100%;
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+} 
 
+h2{
+  grid-area: h2;
+  background-color: white;
+  height: 100%;
+  text-align: center;
+  padding: 25px;
 }
 .question-container{
-  background-color: green;
+  grid-area: qstn;
+  height: 100%;
+  background-color: white;
+  height: 300px;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
 }
-  body {
-    margin: 0;
-    font-family: Helvetica;
-  }
-img{
+.option-container{
+  grid-area: choices;
+  height: 100%;
+  background-color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.next,.begin, .option{
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  height: 50px;
+  width: 100px;
+  font-size: 17px;
+  border-style: solid;
+  border-color: black;
+  height: 100%;
+ 
+}
+
+.option:hover{
+  background-color: green;
+  color: white;
+
+}
+.next:hover{
+  background-color: green;
+  color: white;
+}
+.begin:hover{
+  background-color: green;
+  color: white;
+}
+
+
+.navigation{
+  grid-area: nav;
+  height: 100%;
+  background-color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.result{
+  height: 100%;
+  font-size: 40px;
+  height: 50px;
+  text-align: center;
+  padding: 20px;
+}
+/* img{
     height: 250px;
     width: 250px;
-}
+} */
 
 /* 768px is a common "breakpoint" width for tablets */

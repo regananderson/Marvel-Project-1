@@ -188,8 +188,13 @@ function iterate(id) {
     var result = document.getElementsByClassName('result');
     result[0].innerText = '';
 
-    const question = document.getElementById('question');
-    
+   // const question = document.getElementById('question');
+    // let numCorrect = document.getElementsByClassName('right');
+    // let numWrong = document.getElementsByClassName('wrong');
+    //    let numCorrect = 0;
+    //    let numWrong = 0;
+
+
     
    // question.innerText = questions[id].q;
 
@@ -223,12 +228,19 @@ function iterate(id) {
        if (selected == 'true'){
         result[0].innerHTML = 'True';
         result[0].style.color = 'green';
+        //numCorrect++;
+        //result[0].innerHTML = `${numCorrect++} out of ${questions.length} correct`;
 
     }else{
         result[0].innerHTML = 'False';
         result[0].style.color = 'red';
+        //numWrong++;
+        //result[0].innerHTML = `${numWrong++} out of ${questions.length} incorrect`;
+
     }
-       selected = op1.value;
+       //selected = op1.value;
+       //result[0].innerHTML = `${numCorrect++} correct, ${numWrong++} incorrect`
+
     })
     op2.addEventListener('click',function (evt){
         // evt.preventDefault()
@@ -238,10 +250,15 @@ function iterate(id) {
         if (selected == 'true'){
             result[0].innerHTML = 'True';
             result[0].style.color = 'green';
+            //numCorrect++;
+            //result[0].innerHTML = `${numCorrect++} out of ${questions.length} correct`  ;
         }else{
             result[0].innerHTML = 'False';
             result[0].style.color = 'red';
+            //numWrong++;
+            //result[0].innerHTML = `${numWrong++} out of ${questions.length} incorrect`
         }
+        //result[0].innerHTML = `${numCorrect++} correct, ${numWrong++} incorrect`
      })
      op3.addEventListener('click',function (evt){
        // op3.style.backgroundColor = "yellow";
@@ -249,10 +266,18 @@ function iterate(id) {
         if (selected == 'true'){
             result[0].innerHTML = 'True';
             result[0].style.color = 'green';
+            //numCorrect++;
+            //result[0].innerHTML = `${numCorrect++} out of ${questions.length} correct`;
+
         }else{
             result[0].innerHTML = 'False';
             result[0].style.color = 'red';
+            //numWrong++;
+            //result[0].innerHTML = `${numWrong++} out of ${questions.length} incorrect`
+
         }
+        //result[0].innerHTML = `${numCorrect++} correct, ${numWrong++} incorrect`
+
      })
      op4.addEventListener('click',function (evt){
         //op4.style.backgroundColor = "yellow";
@@ -260,10 +285,18 @@ function iterate(id) {
         if (selected == 'true'){
             result[0].innerHTML = 'True';
             result[0].style.color = 'green';
+            //numCorrect++;
+            //result[0].innerHTML = `${numCorrect++} out of ${questions.length} correct`;
+
         }else{
             result[0].innerHTML = 'False';
             result[0].style.color = 'red';
+            //numWrong++;
+           // result[0].innerHTML = `${numWrong++} out of ${questions.length} incorrect`
+
         }
+        //result[0].innerHTML = `${numCorrect++} correct, ${numWrong++} incorrect`
+
      })
 
 
