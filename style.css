@@ -10,17 +10,18 @@ html,body {
   body {
     height: 100vh;
     margin: 0;
-    font-family: "Bangers", "Helvetica";
+    font-family: 'Bangers', 'Helvetica';
     display:grid;
     background-color: rgb(202, 42, 42);
+    background-image: url('https://tse1.mm.bing.net/th?id=OIP.HxJweO9KeS4askAm64TxSgHaHa&pid=Api');
     grid-template-columns: 1fr;
     grid-template-rows: 100px 100px auto 50px 50px;
     grid-template-areas: 
-        "h1"
-        "h2"
-        "qstn"
-        "choices"
-        "nav";
+        'h1'
+        'h2'
+        'qstn'
+        'choices'
+        'nav';
   }
 
 h1{
@@ -34,7 +35,7 @@ h1{
 
 h2{
   grid-area: h2;
-  background-color: white;
+  background-color: rgb(0, 126, 223);
   height: 100%;
   text-align: center;
   padding: 25px;
@@ -42,7 +43,7 @@ h2{
 .question-container{
   grid-area: qstn;
   height: 100%;
-  background-color: white;
+  background-color: aliceblue;
   height: 300px;
   font-size: 25px;
   padding: 35px;
@@ -51,11 +52,11 @@ h2{
 .option-container{
   grid-area: choices;
   height: 100%;
-  background-color: white;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: aliceblue;
 }
 .next,.begin, .choice{
   background-color: black;
@@ -88,12 +89,12 @@ h2{
 .navigation{
   grid-area: nav;
   height: 100%;
-  background-color: white;
   padding-top: 10px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: aliceblue;
  
 }
 .result{
@@ -102,6 +103,6 @@ h2{
   height: 50px;
   text-align: center;
   padding: 20px;
-  background-color: white;
+  background-color: aliceblue;
 }
 
