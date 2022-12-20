@@ -25,7 +25,7 @@ html,body {
 
 h1{
   grid-area: h1;
-  background-color: white;
+  background-color: rgb(202, 42, 42);
   height: 100%;
   text-align: center;
   font-size: 40px;
@@ -45,7 +45,7 @@ h2{
   background-color: white;
   height: 300px;
   font-size: 25px;
-  padding: 20px;
+  padding: 35px;
   text-align: center;
 }
 .option-container{
@@ -57,7 +57,7 @@ h2{
   align-items: center;
   justify-content: center;
 }
-.next,.begin, .option{
+.next,.begin, .choice{
   background-color: black;
   color: white;
   border-radius: 25px;
@@ -70,7 +70,7 @@ h2{
  
 }
 
-.option:hover{
+.choice:hover{
   background-color: green;
   color: white;
 
@@ -89,6 +89,7 @@ h2{
   grid-area: nav;
   height: 100%;
   background-color: white;
+  padding-top: 10px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -103,9 +104,4 @@ h2{
   padding: 20px;
   background-color: white;
 }
-/* img{
-    height: 250px;
-    width: 250px;
-} */
 
-/* 768px is a common "breakpoint" width for tablets */
