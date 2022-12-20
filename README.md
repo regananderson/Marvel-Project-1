@@ -26,3 +26,4 @@ A web trivia game using the Marvel API to display character descriptions.
 * More characters added
 * When a question is answered correctly, the image of the character appears
 * A score system and leaderboards
+* The abilty to choose the level of difficulty
