@@ -10,9 +10,12 @@ A web trivia game using the Marvel API to display character descriptions.
 * Marvel API
 
 ## Screenshots
-<img width="1438" alt="Screen Shot 2022-12-19 at 9 15 28 AM" src="https://user-images.githubusercontent.com/117241865/208446669-15f22570-9d7a-4f1d-8176-3ef5c3d9d488.png">
-<img width="1430" alt="Screen Shot 2022-12-19 at 9 16 04 AM" src="https://user-images.githubusercontent.com/117241865/208446482-385517da-22b2-4852-8737-f4653b047b08.png">
-<img width="1439" alt="Screen Shot 2022-12-19 at 9 15 46 AM" src="https://user-images.githubusercontent.com/117241865/208446514-d911880b-1526-4512-a12f-5fe85c314edb.png">
+<img width="1437" alt="Screen Shot 2022-12-20 at 10 19 51 PM" src="https://user-images.githubusercontent.com/117241865/208759330-53b2f7be-1b1a-4166-a3fd-bd8ad991c4e3.png">
+<img width="1438" alt="Screen Shot 2022-12-20 at 10 20 07 PM" src="https://user-images.githubusercontent.com/117241865/208759338-723cee56-00c7-4266-9177-d634e9285145.png">
+<img width="1437" alt="Screen Shot 2022-12-20 at 10 20 22 PM" src="https://user-images.githubusercontent.com/117241865/208759343-7014f16c-9805-428d-8875-f69c6474dd13.png">
+<img width="1439" alt="Screen Shot 2022-12-20 at 10 20 36 PM" src="https://user-images.githubusercontent.com/117241865/208759351-46aaf28b-2b8d-45e8-89f5-af4c528bd452.png">
+
+
 
 
 
