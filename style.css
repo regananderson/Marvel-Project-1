@@ -11,23 +11,53 @@ body {
 }
 
 body {
-  height: 100vh;
-  margin: 0;
+  /* height: 100vh;
+  margin: 0; */
   font-family: 'Bangers', 'Helvetica';
-  display: grid;
-  background-color: rgb(202, 42, 42);
+  /* display: grid;
+  background-color: rgb(202, 42, 42); */ 
   background-image: url('https://tse1.mm.bing.net/th?id=OIP.HxJweO9KeS4askAm64TxSgHaHa&pid=Api');
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr;
   grid-template-rows: 100px 100px auto 50px 50px;
   grid-template-areas:
     'h1'
     'h2'
     'qstn'
     'choices'
-    'nav';
+    'nav'; */
+    text-align: center;
+}
+.pre-game, .instructions, .game-container, .post-game{
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.942);
+  padding: 20px;
+  margin: 100px;
+  height: 500px;
+  width: 700px;
+}
+.opening-title{
+  font-size: 100px;
+}
+.opening-subtitle, .game-subtitle{
+  font-size: 40px;
+}
+.opening-btn, .begin{
+  background-color: rgb(29, 187, 240);
+  border-radius: 25px;
+  height: 50px;
+  width: 150px;
+  margin: 50px;
+}
+.next, .choice{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(29, 187, 240);
+  border-radius: 25px;
+  height: 50px;
+  width: 150px;
 }
 
-h1 {
+.game-title {
   grid-area: h1;
   background-color: rgb(202, 42, 42);
   height: 100%;
@@ -36,25 +66,23 @@ h1 {
   padding: 10px;
 }
 
-h2 {
+/* .game-subtitle {
   grid-area: h2;
   background-color: rgb(0, 126, 223);
   height: 100%;
   text-align: center;
   padding: 25px;
-}
+} */
 
 .question-container {
-  grid-area: qstn;
-  height: 100%;
-  background-color: rgb(214, 231, 246);
-  height: 300px;
+  /* grid-area: qstn; */
+  height: 200px;
   font-size: 25px;
   padding: 35px;
   text-align: center;
 }
 
-.option-container {
+/* .option-container {
   grid-area: choices;
   height: 100%;
   height: 50px;
@@ -62,10 +90,9 @@ h2 {
   align-items: center;
   justify-content: center;
   background-color: rgb(214, 231, 246);
-}
+} */
 
-.next,
-.begin,
+/* .next,
 .choice {
   background-color: black;
   color: white;
@@ -77,7 +104,7 @@ h2 {
   border-color: black;
   height: 100%;
 
-}
+} */
 
 .choice:hover {
   background-color: green;
@@ -96,7 +123,7 @@ h2 {
 }
 
 
-.navigation {
+/* .navigation {
   grid-area: nav;
   height: 100%;
   padding-top: 10px;
@@ -106,13 +133,13 @@ h2 {
   justify-content: center;
   background-color: rgb(214, 231, 246);
 
-}
+} */
 
-.result {
+/* .result {
   height: 100%;
   font-size: 30px;
   height: 50px;
   text-align: center;
   padding: 20px;
   background-color: rgb(214, 231, 246);
-}
+} */
